@@ -1,0 +1,52 @@
+.design-archives {
+    text-align: center;
+    margin-top: 3rem;
+
+    h3 {
+        font-size: 1.3em;
+        color: $color-4;
+        margin-bottom: 3rem;
+    }
+
+    a:link,
+    a:visited,
+    a:active {
+        display: inline-block;
+        width: 130px;
+        border-radius: 25px;
+        text-align: center;
+        margin: 5px;
+        background-color: $color-3;
+        color: $color-5;
+        padding: 1.5rem;
+
+        @include respond-to("lg") {
+            width: 180px;
+        }
+    }
+
+    @include respond-to("md") {
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            li {
+                padding: 20px 20px;
+            }
+        }
+    }
+
+    .viewall a {
+        background-color: $color-5;
+        color: $color-3;
+    }
+
+    a:hover {
+        background: darken($color-3, 20%);
+    }
+
+    a:last-of-type:hover {
+        background: darken($color-6, 10%);
+    }
+}

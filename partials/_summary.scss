@@ -1,0 +1,79 @@
+.summary {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to("xs") {
+        max-width: 300px;
+    }
+
+    @include respond-to("sm") {
+        max-width: 400px;
+    }
+    @include respond-to("md") {
+        max-width: 500px;
+    }
+
+    @include respond-to("lg") {
+        margin-left: 150px;
+    }
+
+    @include respond-to("xl") {
+        max-width: 700px;
+    }
+
+    p:last-child {
+        margin-top: 3rem;
+        line-height: 3em;
+        text-align: right;
+        max-width: 280px;
+
+        @include respond-to("sm") {
+            align-self: flex-end;
+            margin-right: 25px;
+        }
+
+        @include respond-to("md") {
+            max-width: 320px;
+            align-self: flex-end;
+            margin-right: 50px;
+        }
+
+        @include respond-to("lg") {
+            max-width: 380px;
+        }
+
+        a:link,
+        a:visited,
+        a:active {
+            display: inline-block;
+            width: 130px;
+            border-radius: 25px;
+            text-align: center;
+            margin: 5px;
+            background-color: $color-3;
+            color: $color-5;
+
+            @include respond-to("md") {
+                width: 150px;
+            }
+
+            @include respond-to("lg") {
+                width: 200px;
+            }
+        }
+
+        a:last-of-type {
+            background-color: $color-5;
+            color: $color-3;
+        }
+
+        a:hover {
+            background: darken($color-3, 20%);
+        }
+
+        a:last-of-type:hover {
+            background: darken($color-6, 10%);
+        }
+    }
+}

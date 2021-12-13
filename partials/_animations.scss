@@ -1,0 +1,19 @@
+@keyframes rot {
+  from {
+    transform: translateY(20%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rocket {
+  from {
+    transform: translateY(10%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

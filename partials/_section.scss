@@ -1,0 +1,44 @@
+section {
+    .preamble {
+        margin-top: 5rem;
+        line-height: 1.3em;
+
+        @include respond-to("lg") {
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: $color-4;
+            margin-top: 60px;
+            margin-left: 70px;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        h3::before {
+            content: "";
+            background: url("./assets/icon-1.svg") no-repeat;
+            position: absolute;
+            float: left;
+            left: 10px;
+            margin-left: 20px;
+            margin-top: -20px;
+            padding: 1.7em;
+            display: flex;
+            flex-direction: row;
+
+            animation: rot 5s linear infinite alternate;
+
+            @include respond-to("lg") {
+                left: 150px;
+                margin-top: -20px;
+            }
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+}

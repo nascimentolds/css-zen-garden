@@ -1,0 +1,44 @@
+.zen-resources {
+  background-color: $color-6;
+  padding: 3.5rem;
+  border-radius: 30px;
+  font-family: $primary-font;
+  margin-top: 3rem;
+  line-height: 1.5em;
+  margin-bottom: 4rem;
+
+  @include respond-to("lg") {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @include respond-to("xs") {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond-to("md") {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  h3 {
+    font-size: 1.3em;
+    color: $color-3;
+    margin-bottom: 3rem;
+  }
+
+  a:link,
+  a:visited,
+  a:active {
+    color: $color-1;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

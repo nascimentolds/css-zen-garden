@@ -1,0 +1,65 @@
+.design-selection {
+    background-color: $color-1;
+    padding: 3.5rem;
+    border-radius: 30px;
+    font-family: $primary-font;
+    margin-top: 30px;
+
+    @include respond-to("lg") {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    h3 {
+        font-size: 1.3em;
+        color: $color-4;
+        margin-bottom: 3rem;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+    
+        @include respond-to("md") {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    li {
+        a:link:first-child,
+        a:visited,
+        a:active {
+            color: $color-5;
+            font-family: $secondary-font;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        &::before{
+            content: '';
+            position: relative;
+            left: 0;
+            top: 0;
+            padding: 0px 10px;
+            background-image: url("./assets/dot.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-size: 18px;
+            margin-right: 5px;
+        }
+    }
+
+    a:link,
+    a:visited,
+    a:active {
+        color: $color-3;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
